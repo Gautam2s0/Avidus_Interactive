@@ -19,7 +19,6 @@ userRouter.post("/register", async (req, res) => {
         Number(process.env.saltRounds),
         async (err, hash) => {
           if (hash) {
-            const date = Date.now();
             const user = new UserModel({
               name,
               email,
