@@ -55,6 +55,7 @@ Tech Stack
 <img src="./Images/signup.png"/> 
 
 ## user Profile Page
+<img src="./Images/profile.png"/> 
 
 ## Creating Property Listing Page
 <img src="./Images/createproperty.png"/> 
