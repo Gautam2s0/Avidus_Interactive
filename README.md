@@ -1,7 +1,7 @@
 # Avidus_Interactive
 
 <ul>
-<li> The Property Booking Platform is a responsive web application built using React and Chakra UI. It allows users to browse and book properties, providing essential details such as property title, description, booking date, location, and price. Users can easily view property options, select desired dates, and receive comprehensive information to make informed booking decisions.</li>
+<li> The Property Booking Platform is a responsive web application built using MERN Stack. It allows users to browse and book properties, providing essential details such as property title, description, booking date, location, and price. Users can easily view property options, select desired dates, and receive comprehensive information to make informed booking decisions.</li>
 
 
 </ul>
