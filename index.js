@@ -1,8 +1,8 @@
 const express = require("express");
 require("dotenv").config();
 const { connection } = require("./Configs/db");
-const {userRouter} =require("./Router/user")
-const {propertyRouter} =require("./Router/property")
+const {propertyRouter} =require("./Router/property");
+// const {userRouter} =require("./Router/user")
 
 // const { ProductsRoute } = require("./Routes/productRoute");
 // const { Cartrouter } = require("./Routes/Cart");
