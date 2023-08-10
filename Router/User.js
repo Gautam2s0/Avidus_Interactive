@@ -41,8 +41,7 @@ userRouter.post("/register", async (req, res) => {
 //login router
 userRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  console.log(email,password)
-
+  
   // check if email and password are present in the request body
   if (!email || !password) {
     return res.status(400).send("Email and password are required");
@@ -61,7 +60,7 @@ userRouter.post("/login", async (req, res) => {
         const token = jwt.sign({ userID: user._id }, process.env.secretKey);
         user.save();
         res.send({ msg: "Login Successfull", token: token });
-        console.log(user);
+        
       } else {
         res.status(401).send({ error: "Incorrect password" });
       }

@@ -27,9 +27,15 @@ propertyRouter.get('/list', async (req, res) => {
 });
 
 propertyRouter.post('/booking',UserID, async (req, res) => {
+  
+  const {propertyId,from,till}=req.body
+  const userID=req.userID
+  const user={userID,propertyId,from,till}
+ 
    
   try {
-    const book = new BookingModel(req.body)
+    
+    const book = new BookingModel(user)
     await book.save()
     res.status(200).send(book);
   } catch (error) {
@@ -38,14 +44,12 @@ propertyRouter.post('/booking',UserID, async (req, res) => {
 });
 
 propertyRouter.get('/booking',UserID, async (req, res) => {
-   const id=req.body.userID
+   const id=req.userID
   try {
-    const cart=await BookingModel.find({userID:id})
-    .populate("productId")
-    .select("_id userId productId quantity")
-    cart.length > 0
-      ? res.status(200).send(cart)
-      : res.status(200).send("No items in your cart");
+    const book=await BookingModel.find({userID:id})
+    book.length > 0
+      ? res.status(200).send(book)
+      : res.status(200).send("you did not book so for");
   
   } catch (error) {
     res.status(500).send({ error: 'An error occurred' });
